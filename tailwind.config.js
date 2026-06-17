@@ -6,8 +6,28 @@ export default {
   theme: {
     container: {
       center: true,
+      padding: "1rem",
+      screens: {
+        sm: "640px",
+        md: "768px",
+        lg: "1024px",
+        xl: "1200px",
+      },
     },
-    extend: {},
+    extend: {
+      colors: {
+        brand: {
+          bg: "#0f0f17",
+          surface: "#1a1a2e",
+          accent: "#818cf8",
+          cyan: "#38bdf8",
+          muted: "#94a3b8",
+        },
+      },
+      fontFamily: {
+        sans: ["Inter", "system-ui", "sans-serif"],
+      },
+    },
   },
   plugins: [],
 };
