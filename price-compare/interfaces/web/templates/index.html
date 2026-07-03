@@ -42,6 +42,7 @@
 
         <!-- 错误提示 -->
         <div id="errorBox" class="error-box hidden"></div>
+        <div id="noteBox" class="note-box hidden"></div>
 
         <!-- 标签切换 -->
         <div id="contentArea" class="content-area">
@@ -141,14 +142,13 @@
                 });
                 const data = await resp.json();
                 if (data.error) {
-                    if (data.type === "browser_missing") {
-                        showError("浏览器未安装，无法执行实时采集。\n\n" + data.error + "\n\n当前展示的是示例数据。");
-                    } else {
-                        showError(data.error);
-                    }
+                    showError(data.error);
                     return;
                 }
                 renderResult(data);
+                if (data.is_simulated) {
+                    showNote(data.note || "当前展示的是模拟数据");
+                }
             } catch (err) {
                 showError("网络请求失败: " + err.message);
             } finally {
@@ -161,6 +161,14 @@
             const box = document.getElementById("errorBox");
             box.innerHTML = msg.replace(/\n/g, "<br>");
             box.classList.remove("hidden");
+            document.getElementById("noteBox").classList.add("hidden");
+        }
+
+        function showNote(msg) {
+            const box = document.getElementById("noteBox");
+            box.innerHTML = msg.replace(/\n/g, "<br>");
+            box.classList.remove("hidden");
+            document.getElementById("errorBox").classList.add("hidden");
         }
 
         function renderResult(data) {

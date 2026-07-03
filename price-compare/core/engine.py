@@ -1,5 +1,6 @@
 """核心编排模块 - 整合爬虫、处理、分析流程"""
 import asyncio
+import random
 from typing import List, Dict, Any, Optional
 
 from models.product import Product
@@ -33,13 +34,14 @@ class PriceCompareEngine:
             platforms = list(SCRAPERS.keys())
 
         # 1. 爬虫采集（并发）
-        products = await self._crawl(keyword, platforms, max_items)
+        products, is_simulated = await self._crawl(keyword, platforms, max_items)
 
         # 2. 数据清洗
         products = self.cleaner.clean(products)
 
-        # 3. 去重
-        products = self.deduplicator.deduplicate(products)
+        # 3. 去重（模拟数据跳过去重，避免模板相似被误删）
+        if not is_simulated:
+            products = self.deduplicator.deduplicate(products)
 
         # 4. 按价格升序排序
         products.sort(key=lambda p: p.price)
@@ -49,7 +51,7 @@ class PriceCompareEngine:
         recommendations = self.recommender.recommend(products)
         charts = self.visualizer.generate_chart_data(products)
 
-        return {
+        result = {
             "keyword": keyword,
             "total_count": len(products),
             "products": [p.to_dict() for p in products],
@@ -58,31 +60,40 @@ class PriceCompareEngine:
             "charts": charts,
         }
 
+        if is_simulated:
+            result["note"] = "【模拟数据】Chromium 浏览器未安装，展示的是基于关键词生成的模拟数据。在本地安装浏览器后可获得真实采集数据。"
+            result["is_simulated"] = True
+
+        return result
+
     async def _crawl(
         self, keyword: str, platforms: List[str], max_items: int
-    ) -> List[Product]:
-        """并发执行多平台爬虫"""
+    ) -> tuple[List[Product], bool]:
+        """并发执行多平台爬虫，浏览器不可用时回退到模拟数据"""
+        # 检查 Playwright 是否可用
         try:
             from playwright.async_api import async_playwright
         except ImportError:
-            raise RuntimeError("Playwright 未安装，请运行: pip install playwright && playwright install chromium")
+            print("[Engine] Playwright 未安装，使用模拟数据")
+            return self._generate_mock_data(keyword, platforms, max_items), True
 
-        all_products = []
-        async with async_playwright() as p:
-            # 检测浏览器是否可用
-            try:
+        # 检查浏览器是否能启动
+        browser_available = False
+        try:
+            async with async_playwright() as p:
                 browser = await p.chromium.launch(headless=True)
                 await browser.close()
-            except Exception as e:
-                raise RuntimeError(
-                    f"Chromium 浏览器未安装或无法启动。\n"
-                    f"错误详情: {e}\n"
-                    f"请运行以下命令安装浏览器:\n"
-                    f"  playwright install chromium\n"
-                    f"如果下载缓慢，可尝试:\n"
-                    f"  PLAYWRIGHT_DOWNLOAD_HOST=https://npmmirror.com/mirrors/playwright python -m playwright install chromium"
-                )
+                browser_available = True
+        except Exception as e:
+            print(f"[Engine] 浏览器无法启动: {e}")
+            print("[Engine] 使用模拟数据")
 
+        if not browser_available:
+            return self._generate_mock_data(keyword, platforms, max_items), True
+
+        # 浏览器可用，执行真实采集
+        all_products = []
+        async with async_playwright() as p:
             tasks = []
             for plat in platforms:
                 if plat not in SCRAPERS:
@@ -98,7 +109,7 @@ class PriceCompareEngine:
                 elif isinstance(result, Exception):
                     print(f"[采集异常] {result}")
 
-        return all_products
+        return all_products, False
 
     async def _safe_search(self, scraper, keyword: str) -> List[Product]:
         """安全执行搜索，确保资源释放"""
@@ -109,3 +120,83 @@ class PriceCompareEngine:
             return []
         finally:
             await scraper.close()
+
+    def _generate_mock_data(
+        self, keyword: str, platforms: List[str], max_items: int
+    ) -> List[Product]:
+        """生成模拟数据（浏览器不可用时使用）"""
+        templates = [
+            "{brand}{keyword}{adj1}{adj2}",
+            "{brand}{keyword}{adj1}{adj3}",
+            "2024新款{brand}{keyword}{adj2}",
+            "{brand}{keyword}{adj3}{adj4}",
+            "{brand}{keyword}{adj1}{adj2}{adj3}",
+            "正品{brand}{keyword}{adj4}",
+            "{brand}{keyword}{adj2}{adj5}",
+            "热销{brand}{keyword}{adj1}",
+            "{brand}{keyword}{adj3}{adj5}{adj6}",
+            "特价{brand}{keyword}{adj4}{adj6}",
+        ]
+        adjectives = ["真无线", "主动降噪", "入耳式", "运动防水", "高音质", "蓝牙5.3", "超长续航", "游戏低延迟", "迷你隐形", "商务旗舰", "HiFi音质", "Type-C快充", "触控操作", "IPX7防水"]
+        brands = ["", "品牌", "知名品牌", "京东自营", "国际大牌", "国货", "旗舰款", "官方正品", "畅销款", "限量款"]
+        shops = {
+            "jd": ["京东自营", "品牌旗舰店", "数码专营店", "国际旗舰店", "京东超市", "京东家电"],
+            "taobao": ["淘小宝数码", "声美专营店", "天籁之音", "尊享数码", "旗舰音响", "淘宝精选"],
+            "pdd": ["数码专营店", "国货数码旗舰", "极客数码", "迷你数码馆", "全民数码", "百亿补贴店"],
+        }
+        urls = {
+            "jd": "https://search.jd.com/Search?keyword=",
+            "taobao": "https://s.taobao.com/search?q=",
+            "pdd": "https://mobile.yangkeduo.com/search_result.html?search_key=",
+        }
+
+        products = []
+        items_per_platform = max(6, min(max_items // len(platforms), 10))
+
+        for plat in platforms:
+            price_ranges = {"pdd": (19, 129), "taobao": (39, 199), "jd": (79, 599)}
+            low, high = price_ranges.get(plat, (29, 299))
+            plat_shops = shops.get(plat, ["商家"])
+            plat_scores = {"jd": 4.9, "taobao": 4.7, "pdd": 4.5}
+            base_score = plat_scores.get(plat, 4.5)
+
+            for i in range(items_per_platform):
+                # 使用模板生成多样化标题
+                template = templates[i % len(templates)]
+                adj_sample = random.sample(adjectives, 6)
+                brand = random.choice(brands)
+                title = template.format(
+                    brand=brand,
+                    keyword=keyword,
+                    adj1=adj_sample[0],
+                    adj2=adj_sample[1],
+                    adj3=adj_sample[2],
+                    adj4=adj_sample[3],
+                    adj5=adj_sample[4],
+                    adj6=adj_sample[5],
+                ).strip()
+
+                # 价格递增 + 随机波动
+                price = low + (high - low) * (i / max(items_per_platform - 1, 1)) + random.randint(-8, 12)
+                price = max(low, min(high, price))
+                price = round(price, 2)
+
+                # 销量与价格负相关
+                sales_base = int((high - price) / max(high, 1) * 150000)
+                sales = max(300, sales_base + random.randint(-8000, 15000))
+
+                # 评分
+                score = round(min(5.0, base_score + random.uniform(-0.15, 0.1)), 1)
+
+                products.append(Product(
+                    platform=plat,
+                    title=title,
+                    price=price,
+                    sales=sales,
+                    shop_name=random.choice(plat_shops),
+                    shop_score=score,
+                    url=urls.get(plat, "") + keyword,
+                    image_url="",
+                ))
+
+        return products

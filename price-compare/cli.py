@@ -135,6 +135,12 @@ def main():
     engine = PriceCompareEngine(headless=not args.no_headless)
     result = asyncio.run(engine.run(args.keyword, platforms, args.max_items))
 
+    # 打印模拟数据提示
+    if result.get("is_simulated"):
+        print(f"\n{'='*80}")
+        print("  【提示】", result.get("note", ""))
+        print(f"{'='*80}\n")
+
     # 打印结果
     print_table(result["products"], result["recommendations"])
     print_summary(result["comparison"])

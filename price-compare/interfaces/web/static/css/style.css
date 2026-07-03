@@ -161,6 +161,27 @@ body {
     font-size: 13px;
 }
 
+/* 提示 */
+.note-box {
+    background: #e6f7ff;
+    border: 1px solid #91d5ff;
+    color: #096dd9;
+    padding: 16px 24px;
+    border-radius: 8px;
+    margin-bottom: 24px;
+    font-size: 14px;
+    line-height: 1.6;
+    white-space: pre-wrap;
+}
+
+.note-box code {
+    background: #d6eeff;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: monospace;
+    font-size: 13px;
+}
+
 .hidden {
     display: none;
 }
