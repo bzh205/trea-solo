@@ -62,10 +62,27 @@ class PriceCompareEngine:
         self, keyword: str, platforms: List[str], max_items: int
     ) -> List[Product]:
         """并发执行多平台爬虫"""
-        from playwright.async_api import async_playwright
+        try:
+            from playwright.async_api import async_playwright
+        except ImportError:
+            raise RuntimeError("Playwright 未安装，请运行: pip install playwright && playwright install chromium")
 
         all_products = []
         async with async_playwright() as p:
+            # 检测浏览器是否可用
+            try:
+                browser = await p.chromium.launch(headless=True)
+                await browser.close()
+            except Exception as e:
+                raise RuntimeError(
+                    f"Chromium 浏览器未安装或无法启动。\n"
+                    f"错误详情: {e}\n"
+                    f"请运行以下命令安装浏览器:\n"
+                    f"  playwright install chromium\n"
+                    f"如果下载缓慢，可尝试:\n"
+                    f"  PLAYWRIGHT_DOWNLOAD_HOST=https://npmmirror.com/mirrors/playwright python -m playwright install chromium"
+                )
+
             tasks = []
             for plat in platforms:
                 if plat not in SCRAPERS:
@@ -78,6 +95,8 @@ class PriceCompareEngine:
             for result in results:
                 if isinstance(result, list):
                     all_products.extend(result)
+                elif isinstance(result, Exception):
+                    print(f"[采集异常] {result}")
 
         return all_products
 

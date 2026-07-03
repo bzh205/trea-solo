@@ -140,10 +140,17 @@
                     body: JSON.stringify({ keyword, platforms, max_items: maxItems }),
                 });
                 const data = await resp.json();
-                if (data.error) { throw new Error(data.error); }
+                if (data.error) {
+                    if (data.type === "browser_missing") {
+                        showError("浏览器未安装，无法执行实时采集。\n\n" + data.error + "\n\n当前展示的是示例数据。");
+                    } else {
+                        showError(data.error);
+                    }
+                    return;
+                }
                 renderResult(data);
             } catch (err) {
-                showError(err.message);
+                showError("网络请求失败: " + err.message);
             } finally {
                 document.getElementById("loading").classList.add("hidden");
                 document.getElementById("searchBtn").disabled = false;
@@ -152,7 +159,7 @@
 
         function showError(msg) {
             const box = document.getElementById("errorBox");
-            box.textContent = "采集出错：" + msg;
+            box.innerHTML = msg.replace(/\n/g, "<br>");
             box.classList.remove("hidden");
         }
 

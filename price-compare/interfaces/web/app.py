@@ -56,8 +56,10 @@ async def search(request: Request):
         engine = PriceCompareEngine(headless=True)
         result = await engine.run(keyword, platforms, max_items)
         return JSONResponse(result)
+    except RuntimeError as e:
+        return JSONResponse({"error": str(e), "type": "browser_missing"}, status_code=503)
     except Exception as e:
-        return JSONResponse({"error": f"采集失败: {str(e)}"}, status_code=500)
+        return JSONResponse({"error": f"采集失败: {str(e)}", "type": "unknown"}, status_code=500)
 
 
 if __name__ == "__main__":
