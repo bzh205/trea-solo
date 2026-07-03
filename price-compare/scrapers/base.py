@@ -14,6 +14,9 @@ class BaseScraper(ABC):
     platform: str = "base"
     search_url: str = ""
 
+    # 反爬标识
+    BLOCKED_KEYWORDS = ["登录", "登录注册", "请输入", "Access Denied", "验证", "captcha", "滑动验证"]
+
     def __init__(self, max_items: int = 20, headless: bool = True):
         self.max_items = max_items
         self.headless = headless
@@ -32,12 +35,30 @@ class BaseScraper(ABC):
         )
         self.page = await self.context.new_page()
 
-    async def _navigate_and_wait(self, url: str, wait_selector: str = None):
+    async def _is_blocked(self) -> bool:
+        """检测页面是否被反爬拦截（登录墙/验证等）"""
+        try:
+            title = await self.page.title()
+            url = self.page.url
+            # URL 包含登录
+            if any(k in url.lower() for k in ["login", "passport", "verify"]):
+                return True
+            # 标题包含登录
+            if any(k in title for k in self.BLOCKED_KEYWORDS):
+                return True
+            return False
+        except Exception:
+            return False
+
+    async def _navigate_and_wait(self, url: str, wait_selector: str = None, timeout: int = 10000):
         """导航到页面并等待加载"""
-        await self.page.goto(url, wait_until="domcontentloaded")
+        await self.page.goto(url, wait_until="domcontentloaded", timeout=15000)
         if wait_selector:
-            await self.page.wait_for_selector(wait_selector, timeout=10000)
-        await asyncio.sleep(random_delay(1, 3))
+            try:
+                await self.page.wait_for_selector(wait_selector, timeout=timeout)
+            except Exception:
+                pass  # 等待选择器超时不算错误
+        await asyncio.sleep(random_delay(0.5, 1.5))
 
     @abstractmethod
     async def _parse_page(self, keyword: str) -> List[Product]:
@@ -48,9 +69,11 @@ class BaseScraper(ABC):
         """搜索采集主流程"""
         try:
             products = await self._parse_page(keyword)
+            if not products:
+                return []
             return products[: self.max_items]
         except Exception as e:
-            print(f"[{self.platform}] 采集失败: {e}")
+            print(f"[{self.platform}] 采集失败: {str(e)[:80]}")
             return []
 
     async def close(self):
@@ -75,14 +98,11 @@ class BaseScraper(ABC):
         if not text:
             return 0
         text = str(text)
-        # 处理 "万" 单位
         wan_match = re.search(r"(\d+\.?\d*)\s*万", text)
         if wan_match:
             return int(float(wan_match.group(1)) * 10000)
-        # 处理 "万+"
         wan_plus = re.search(r"(\d+\.?\d*)万\+", text)
         if wan_plus:
             return int(float(wan_plus.group(1)) * 10000)
-        # 普通数字
         match = re.search(r"(\d+)", text)
         return int(match.group(1)) if match else 0

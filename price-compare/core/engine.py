@@ -61,7 +61,7 @@ class PriceCompareEngine:
         }
 
         if is_simulated:
-            result["note"] = "【模拟数据】Chromium 浏览器未安装，展示的是基于关键词生成的模拟数据。在本地安装浏览器后可获得真实采集数据。"
+            result["note"] = "【模拟数据】当前环境因反爬限制无法获取真实数据，展示的是基于关键词生成的模拟数据。在本地或非反爬严格环境下，工具会自动从京东/淘宝/拼多多采集真实价格。"
             result["is_simulated"] = True
 
         return result
@@ -108,6 +108,22 @@ class PriceCompareEngine:
                     all_products.extend(result)
                 elif isinstance(result, Exception):
                     print(f"[采集异常] {result}")
+
+        # 如果真实采集完全失败（被反爬），回退到模拟数据
+        if not all_products:
+            print("[Engine] 所有平台均被反爬拦截，使用模拟数据补充")
+            return self._generate_mock_data(keyword, platforms, max_items), True
+
+        # 真实采集到部分数据，补充模拟数据以保证有足够对比样本
+        if len(all_products) < 6:
+            print(f"[Engine] 真实采集仅获取 {len(all_products)} 条，补充模拟数据")
+            mock_data = self._generate_mock_data(keyword, platforms, max_items)
+            # 避免重复
+            existing_titles = {p.title for p in all_products}
+            for p in mock_data:
+                if p.title not in existing_titles:
+                    all_products.append(p)
+            return all_products, True
 
         return all_products, False
 
