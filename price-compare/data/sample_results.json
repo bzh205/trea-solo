@@ -4,305 +4,638 @@
   "products": [
     {
       "platform": "pdd",
-      "title": "蓝牙耳机真无线入耳式迷你运动降噪通话高音质超长续航",
-      "price": 29.9,
-      "sales": 85000,
-      "shop_name": "数码专营店",
+      "title": "White Gold Plated Princess",
+      "price": 9.99,
+      "sales": 400,
+      "shop_name": "特价清仓店",
+      "shop_score": 3.0,
+      "url": "https://fakestoreapi.com/products/7",
+      "image_url": "https://fakestoreapi.com/img/71YAIFU48IL._AC_UL640_QL65_ML3_t.png",
+      "crawl_time": "2026-07-03 08:24:43"
+    },
+    {
+      "platform": "pdd",
+      "title": "Pierced Owl Rose Gold Plated Stainless Steel Double",
+      "price": 10.99,
+      "sales": 100,
+      "shop_name": "平价好物铺",
+      "shop_score": 1.9,
+      "url": "https://fakestoreapi.com/products/8",
+      "image_url": "https://fakestoreapi.com/img/51UDEzMJVpL._AC_UL640_QL65_ML3_t.png",
+      "crawl_time": "2026-07-03 08:24:43"
+    },
+    {
+      "platform": "taobao",
+      "title": "Mens Casual Slim Fit",
+      "price": 15.99,
+      "sales": 430,
+      "shop_name": "外贸原单店",
+      "shop_score": 2.1,
+      "url": "https://fakestoreapi.com/products/4",
+      "image_url": "https://fakestoreapi.com/img/71YXzeOuslL._AC_UY879_t.png",
+      "crawl_time": "2026-07-03 08:24:43"
+    },
+    {
+      "platform": "taobao",
+      "title": "Mens Casual Premium Slim Fit T-Shirts",
+      "price": 22.3,
+      "sales": 259,
+      "shop_name": "潮流服饰店",
+      "shop_score": 4.1,
+      "url": "https://fakestoreapi.com/products/2",
+      "image_url": "https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_t.png",
+      "crawl_time": "2026-07-03 08:24:43"
+    },
+    {
+      "platform": "taobao",
+      "title": "Mens Cotton Jacket",
+      "price": 55.99,
+      "sales": 500,
+      "shop_name": "潮流服饰店",
       "shop_score": 4.7,
-      "url": "https://mobile.yangkeduo.com/goods.html?goods_id=1001",
-      "image_url": "https://via.placeholder.com/150",
-      "crawl_time": "2026-07-03 10:00:00"
+      "url": "https://fakestoreapi.com/products/3",
+      "image_url": "https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_t.png",
+      "crawl_time": "2026-07-03 08:24:43"
+    },
+    {
+      "platform": "taobao",
+      "title": "BIYLACLESEN Women's 3-in-1 Snowboard Jacket Winter Coats",
+      "price": 56.99,
+      "sales": 235,
+      "shop_name": "潮流服饰店",
+      "shop_score": 2.6,
+      "url": "https://fakestoreapi.com/products/15",
+      "image_url": "https://fakestoreapi.com/img/51Y5NI-I5jL._AC_UX679_t.png",
+      "crawl_time": "2026-07-03 08:24:43"
+    },
+    {
+      "platform": "jd",
+      "title": "WD 2TB Elements Portable External Hard Drive - USB 3.0",
+      "price": 64.0,
+      "sales": 203,
+      "shop_name": "京东自营旗舰店",
+      "shop_score": 3.3,
+      "url": "https://fakestoreapi.com/products/9",
+      "image_url": "https://fakestoreapi.com/img/61IBBVJvSDL._AC_SY879_t.png",
+      "crawl_time": "2026-07-03 08:24:43"
+    },
+    {
+      "platform": "jd",
+      "title": "SanDisk SSD PLUS 1TB Internal SSD - SATA III 6 Gb/s",
+      "price": 109.0,
+      "sales": 470,
+      "shop_name": "官方授权店",
+      "shop_score": 2.9,
+      "url": "https://fakestoreapi.com/products/10",
+      "image_url": "https://fakestoreapi.com/img/61U7T1koQqL._AC_SX679_t.png",
+      "crawl_time": "2026-07-03 08:24:43"
+    },
+    {
+      "platform": "jd",
+      "title": "Silicon Power 256GB SSD 3D NAND A55 SLC Cache Performance Boost SATA III 2.5",
+      "price": 109.0,
+      "sales": 319,
+      "shop_name": "数码精选专营店",
+      "shop_score": 4.8,
+      "url": "https://fakestoreapi.com/products/11",
+      "image_url": "https://fakestoreapi.com/img/71kWymZ+c+L._AC_SX679_t.png",
+      "crawl_time": "2026-07-03 08:24:43"
+    },
+    {
+      "platform": "taobao",
+      "title": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
+      "price": 109.95,
+      "sales": 120,
+      "shop_name": "潮流服饰店",
+      "shop_score": 3.9,
+      "url": "https://fakestoreapi.com/products/1",
+      "image_url": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_t.png",
+      "crawl_time": "2026-07-03 08:24:43"
+    },
+    {
+      "platform": "jd",
+      "title": "WD 4TB Gaming Drive Works with Playstation 4 Portable External Hard Drive",
+      "price": 114.0,
+      "sales": 400,
+      "shop_name": "京东自营旗舰店",
+      "shop_score": 4.8,
+      "url": "https://fakestoreapi.com/products/12",
+      "image_url": "https://fakestoreapi.com/img/61mtL65D4cL._AC_SX679_t.png",
+      "crawl_time": "2026-07-03 08:24:43"
     },
     {
       "platform": "pdd",
-      "title": "真无线蓝牙耳机2024新款低延迟游戏音乐耳机降噪",
-      "price": 39.9,
-      "sales": 120000,
-      "shop_name": "国货数码旗舰",
-      "shop_score": 4.6,
-      "url": "https://mobile.yangkeduo.com/goods.html?goods_id=1002",
-      "image_url": "https://via.placeholder.com/150",
-      "crawl_time": "2026-07-03 10:00:00"
-    },
-    {
-      "platform": "taobao",
-      "title": "蓝牙耳机真无线入耳式运动防水降噪高音质",
-      "price": 49.9,
-      "sales": 32000,
-      "shop_name": "声美数码专营店",
-      "shop_score": 4.7,
-      "url": "https://item.taobao.com/item.htm?id=2001",
-      "image_url": "https://via.placeholder.com/150",
-      "crawl_time": "2026-07-03 10:00:00"
-    },
-    {
-      "platform": "pdd",
-      "title": "迷你蓝牙耳机隐形运动小耳机超小隐形降噪",
-      "price": 59.0,
-      "sales": 45000,
-      "shop_name": "迷你数码馆",
-      "shop_score": 4.5,
-      "url": "https://mobile.yangkeduo.com/goods.html?goods_id=1003",
-      "image_url": "https://via.placeholder.com/150",
-      "crawl_time": "2026-07-03 10:00:00"
-    },
-    {
-      "platform": "taobao",
-      "title": "无线蓝牙耳机运动防水降噪高音质长续航通用苹果华为",
-      "price": 69.0,
-      "sales": 58000,
-      "shop_name": "淘小宝数码",
-      "shop_score": 4.8,
-      "url": "https://item.taobao.com/item.htm?id=2002",
-      "image_url": "https://via.placeholder.com/150",
-      "crawl_time": "2026-07-03 10:00:00"
-    },
-    {
-      "platform": "taobao",
-      "title": "蓝牙耳机真无线主动降噪入耳式音乐耳机",
-      "price": 79.0,
-      "sales": 28000,
-      "shop_name": "天籁之音店",
-      "shop_score": 4.8,
-      "url": "https://item.taobao.com/item.htm?id=2003",
-      "image_url": "https://via.placeholder.com/150",
-      "crawl_time": "2026-07-03 10:00:00"
-    },
-    {
-      "platform": "pdd",
-      "title": "蓝牙5.3真无线耳机运动防水降噪游戏低延迟",
-      "price": 89.0,
-      "sales": 72000,
-      "shop_name": "极客数码",
-      "shop_score": 4.6,
-      "url": "https://mobile.yangkeduo.com/goods.html?goods_id=1004",
-      "image_url": "https://via.placeholder.com/150",
-      "crawl_time": "2026-07-03 10:00:00"
+      "title": "Solid Gold Petite Micropave",
+      "price": 168.0,
+      "sales": 70,
+      "shop_name": "平价好物铺",
+      "shop_score": 3.9,
+      "url": "https://fakestoreapi.com/products/6",
+      "image_url": "https://fakestoreapi.com/img/61sbMiUnoGL._AC_UL640_QL65_ML3_t.png",
+      "crawl_time": "2026-07-03 08:24:43"
     },
     {
       "platform": "jd",
-      "title": "京东自营 真无线蓝牙耳机入耳式运动防水降噪",
-      "price": 99.0,
-      "sales": 15000,
-      "shop_name": "京东自营",
-      "shop_score": 4.9,
-      "url": "https://item.jd.com/1001.html",
-      "image_url": "https://via.placeholder.com/150",
-      "crawl_time": "2026-07-03 10:00:00"
-    },
-    {
-      "platform": "taobao",
-      "title": "高音质蓝牙耳机真无线主动降噪入耳式商务耳机",
-      "price": 129.0,
-      "sales": 18000,
-      "shop_name": "尊享数码店",
-      "shop_score": 4.8,
-      "url": "https://item.taobao.com/item.htm?id=2004",
-      "image_url": "https://via.placeholder.com/150",
-      "crawl_time": "2026-07-03 10:00:00"
-    },
-    {
-      "platform": "jd",
-      "title": "京东自营 蓝牙耳机无线降噪运动防水游戏低延迟",
-      "price": 149.0,
-      "sales": 22000,
-      "shop_name": "京东自营",
-      "shop_score": 4.9,
-      "url": "https://item.jd.com/1002.html",
-      "image_url": "https://via.placeholder.com/150",
-      "crawl_time": "2026-07-03 10:00:00"
-    },
-    {
-      "platform": "jd",
-      "title": "知名品牌 真无线蓝牙5.3主动降噪运动入耳式",
-      "price": 169.0,
-      "sales": 12000,
-      "shop_name": "品牌旗舰店",
-      "shop_score": 4.9,
-      "url": "https://item.jd.com/1003.html",
-      "image_url": "https://via.placeholder.com/150",
-      "crawl_time": "2026-07-03 10:00:00"
-    },
-    {
-      "platform": "taobao",
-      "title": "旗舰款 主动降噪蓝牙耳机真无线高保真音质",
-      "price": 199.0,
-      "sales": 9500,
-      "shop_name": "旗舰音响专营",
-      "shop_score": 4.9,
-      "url": "https://item.taobao.com/item.htm?id=2005",
-      "image_url": "https://via.placeholder.com/150",
-      "crawl_time": "2026-07-03 10:00:00"
-    },
-    {
-      "platform": "jd",
-      "title": "京东自营 主动降噪真无线蓝牙耳机旗舰版",
-      "price": 249.0,
-      "sales": 8500,
-      "shop_name": "京东自营",
-      "shop_score": 4.9,
-      "url": "https://item.jd.com/1004.html",
-      "image_url": "https://via.placeholder.com/150",
-      "crawl_time": "2026-07-03 10:00:00"
-    },
-    {
-      "platform": "jd",
-      "title": "国际大牌 真无线降噪蓝牙耳机 Hi-Res音质",
-      "price": 399.0,
-      "sales": 6500,
-      "shop_name": "国际品牌旗舰店",
-      "shop_score": 4.9,
-      "url": "https://item.jd.com/1005.html",
-      "image_url": "https://via.placeholder.com/150",
-      "crawl_time": "2026-07-03 10:00:00"
-    },
-    {
-      "platform": "jd",
-      "title": "国际旗舰 真无线蓝牙耳机 主动降噪 长续航",
+      "title": "Acer SB220Q bi 21.5 inches Full HD (1920 x 1080) IPS Ultra-Thin",
       "price": 599.0,
-      "sales": 4200,
-      "shop_name": "国际品牌旗舰店",
-      "shop_score": 4.9,
-      "url": "https://item.jd.com/1006.html",
-      "image_url": "https://via.placeholder.com/150",
-      "crawl_time": "2026-07-03 10:00:00"
+      "sales": 250,
+      "shop_name": "数码精选专营店",
+      "shop_score": 2.9,
+      "url": "https://fakestoreapi.com/products/13",
+      "image_url": "https://fakestoreapi.com/img/81QpkIctqPL._AC_SX679_t.png",
+      "crawl_time": "2026-07-03 08:24:43"
+    },
+    {
+      "platform": "pdd",
+      "title": "John Hardy Women's Legends Naga Gold & Silver Dragon Station Chain Bracelet",
+      "price": 695.0,
+      "sales": 400,
+      "shop_name": "源头厂家店",
+      "shop_score": 4.6,
+      "url": "https://fakestoreapi.com/products/5",
+      "image_url": "https://fakestoreapi.com/img/71pWzhdJNwL._AC_UL640_QL65_ML3_t.png",
+      "crawl_time": "2026-07-03 08:24:43"
+    },
+    {
+      "platform": "jd",
+      "title": "Samsung 49-Inch CHG90 144Hz Curved Gaming Monitor (LC49HG90DMNXZA) – Super Ultra",
+      "price": 999.99,
+      "sales": 140,
+      "shop_name": "京东自营旗舰店",
+      "shop_score": 2.2,
+      "url": "https://fakestoreapi.com/products/14",
+      "image_url": "https://fakestoreapi.com/img/81Zt42ioCgL._AC_SX679_t.png",
+      "crawl_time": "2026-07-03 08:24:43"
     }
   ],
   "comparison": {
     "summary": {
       "total_count": 15,
-      "min_price": 29.9,
-      "max_price": 599.0,
-      "avg_price": 162.58,
-      "platforms": ["pdd", "taobao", "jd"]
+      "min_price": 9.99,
+      "max_price": 999.99,
+      "avg_price": 209.35,
+      "platforms": [
+        "pdd",
+        "taobao",
+        "jd"
+      ]
     },
     "platform_comparison": [
       {
-        "platform": "pdd",
-        "count": 4,
-        "min_price": 29.9,
-        "max_price": 89.0,
-        "avg_price": 54.45,
-        "avg_sales": 80500,
-        "avg_score": 4.6
-      },
-      {
         "platform": "taobao",
         "count": 5,
-        "min_price": 49.9,
-        "max_price": 199.0,
-        "avg_price": 105.18,
-        "avg_sales": 29100,
-        "avg_score": 4.8
+        "min_price": 15.99,
+        "max_price": 109.95,
+        "avg_price": 52.24,
+        "avg_sales": 309,
+        "avg_score": 3.48
+      },
+      {
+        "platform": "pdd",
+        "count": 4,
+        "min_price": 9.99,
+        "max_price": 695.0,
+        "avg_price": 221.0,
+        "avg_sales": 242,
+        "avg_score": 3.35
       },
       {
         "platform": "jd",
         "count": 6,
-        "min_price": 99.0,
-        "max_price": 599.0,
-        "avg_price": 277.50,
-        "avg_sales": 9700,
-        "avg_score": 4.9
+        "min_price": 64.0,
+        "max_price": 999.99,
+        "avg_price": 332.5,
+        "avg_sales": 297,
+        "avg_score": 3.48
       }
     ],
     "price_distribution": [
-      {"range": "30-141", "count": 9},
-      {"range": "141-252", "count": 4},
-      {"range": "252-364", "count": 1},
-      {"range": "364-475", "count": 0},
-      {"range": "475-599", "count": 1}
+      {
+        "range": "10.0-208.0",
+        "count": 12
+      },
+      {
+        "range": "208.0-406.0",
+        "count": 0
+      },
+      {
+        "range": "406.0-604.0",
+        "count": 1
+      },
+      {
+        "range": "604.0-802.0",
+        "count": 1
+      },
+      {
+        "range": "802.0-1000.0",
+        "count": 1
+      }
     ],
     "best_deals": [
       {
-        "title": "真无线蓝牙耳机2024新款低延迟游戏音乐耳机降噪",
+        "title": "White Gold Plated Princess",
         "platform": "pdd",
-        "price": 39.9,
-        "sales": 120000,
-        "score": 4.6,
-        "value_score": 13835.09,
-        "url": "https://mobile.yangkeduo.com/goods.html?goods_id=1002"
+        "price": 9.99,
+        "sales": 400,
+        "score": 3.0,
+        "value_score": 120.12,
+        "url": "https://fakestoreapi.com/products/7"
       },
       {
-        "title": "蓝牙5.3真无线耳机运动防水降噪游戏低延迟",
-        "platform": "pdd",
-        "price": 89.0,
-        "sales": 72000,
-        "score": 4.6,
-        "value_score": 3724.04,
-        "url": "https://mobile.yangkeduo.com/goods.html?goods_id=1004"
-      },
-      {
-        "title": "迷你蓝牙耳机隐形运动小耳机超小隐形降噪",
-        "platform": "pdd",
-        "price": 59.0,
-        "sales": 45000,
-        "score": 4.5,
-        "value_score": 3432.2,
-        "url": "https://mobile.yangkeduo.com/goods.html?goods_id=1003"
-      },
-      {
-        "title": "蓝牙耳机真无线入耳式迷你运动降噪通话高音质超长续航",
-        "platform": "pdd",
-        "price": 29.9,
-        "sales": 85000,
-        "score": 4.7,
-        "value_score": 13361.04,
-        "url": "https://mobile.yangkeduo.com/goods.html?goods_id=1001"
-      },
-      {
-        "title": "无线蓝牙耳机运动防水降噪高音质长续航通用苹果华为",
+        "title": "Mens Casual Slim Fit",
         "platform": "taobao",
-        "price": 69.0,
-        "sales": 58000,
-        "score": 4.8,
-        "value_score": 4034.78,
-        "url": "https://item.taobao.com/item.htm?id=2002"
+        "price": 15.99,
+        "sales": 430,
+        "score": 2.1,
+        "value_score": 56.47,
+        "url": "https://fakestoreapi.com/products/4"
+      },
+      {
+        "title": "Mens Casual Premium Slim Fit T-Shirts",
+        "platform": "taobao",
+        "price": 22.3,
+        "sales": 259,
+        "score": 4.1,
+        "value_score": 47.62,
+        "url": "https://fakestoreapi.com/products/2"
+      },
+      {
+        "title": "Mens Cotton Jacket",
+        "platform": "taobao",
+        "price": 55.99,
+        "sales": 500,
+        "score": 4.7,
+        "value_score": 41.97,
+        "url": "https://fakestoreapi.com/products/3"
+      },
+      {
+        "title": "Pierced Owl Rose Gold Plated Stainless Steel Double",
+        "platform": "pdd",
+        "price": 10.99,
+        "sales": 100,
+        "score": 1.9,
+        "value_score": 17.29,
+        "url": "https://fakestoreapi.com/products/8"
       }
     ]
   },
   "recommendations": [
-    {"platform": "pdd", "title": "真无线蓝牙耳机2024新款低延迟游戏音乐耳机降噪", "price": 39.9, "sales": 120000, "shop_name": "国货数码旗舰", "shop_score": 4.6, "url": "https://mobile.yangkeduo.com/goods.html?goods_id=1002", "price_score": 0.94, "sales_score": 1.0, "shop_score_normalized": 0.5, "total_score": 0.83, "recommend_label": "强烈推荐"},
-    {"platform": "pdd", "title": "蓝牙耳机真无线入耳式迷你运动降噪通话高音质超长续航", "price": 29.9, "sales": 85000, "shop_name": "数码专营店", "shop_score": 4.7, "url": "https://mobile.yangkeduo.com/goods.html?goods_id=1001", "price_score": 1.0, "sales_score": 0.71, "shop_score_normalized": 0.67, "total_score": 0.79, "recommend_label": "强烈推荐"},
-    {"platform": "pdd", "title": "蓝牙5.3真无线耳机运动防水降噪游戏低延迟", "price": 89.0, "sales": 72000, "shop_name": "极客数码", "shop_score": 4.6, "url": "https://mobile.yangkeduo.com/goods.html?goods_id=1004", "price_score": 0.88, "sales_score": 0.6, "shop_score_normalized": 0.33, "total_score": 0.62, "recommend_label": "推荐"},
-    {"platform": "taobao", "title": "无线蓝牙耳机运动防水降噪高音质长续航通用苹果华为", "price": 69.0, "sales": 58000, "shop_name": "淘小宝数码", "shop_score": 4.8, "url": "https://item.taobao.com/item.htm?id=2002", "price_score": 0.92, "sales_score": 0.48, "shop_score_normalized": 0.83, "total_score": 0.76, "recommend_label": "强烈推荐"},
-    {"platform": "taobao", "title": "蓝牙耳机真无线入耳式运动防水降噪高音质", "price": 49.9, "sales": 32000, "shop_name": "声美数码专营店", "shop_score": 4.7, "url": "https://item.taobao.com/item.htm?id=2001", "price_score": 0.96, "sales_score": 0.27, "shop_score_normalized": 0.67, "total_score": 0.67, "recommend_label": "推荐"},
-    {"platform": "pdd", "title": "迷你蓝牙耳机隐形运动小耳机超小隐形降噪", "price": 59.0, "sales": 45000, "shop_name": "迷你数码馆", "shop_score": 4.5, "url": "https://mobile.yangkeduo.com/goods.html?goods_id=1003", "price_score": 0.94, "sales_score": 0.38, "shop_score_normalized": 0.0, "total_score": 0.48, "recommend_label": "一般"},
-    {"platform": "taobao", "title": "蓝牙耳机真无线主动降噪入耳式音乐耳机", "price": 79.0, "sales": 28000, "shop_name": "天籁之音店", "shop_score": 4.8, "url": "https://item.taobao.com/item.htm?id=2003", "price_score": 0.9, "sales_score": 0.23, "shop_score_normalized": 0.83, "total_score": 0.68, "recommend_label": "推荐"},
-    {"platform": "jd", "title": "京东自营 真无线蓝牙耳机入耳式运动防水降噪", "price": 99.0, "sales": 15000, "shop_name": "京东自营", "shop_score": 4.9, "url": "https://item.jd.com/1001.html", "price_score": 0.87, "sales_score": 0.13, "shop_score_normalized": 1.0, "total_score": 0.65, "recommend_label": "推荐"},
-    {"platform": "taobao", "title": "高音质蓝牙耳机真无线主动降噪入耳式商务耳机", "price": 129.0, "sales": 18000, "shop_name": "尊享数码店", "shop_score": 4.8, "url": "https://item.taobao.com/item.htm?id=2004", "price_score": 0.82, "sales_score": 0.15, "shop_score_normalized": 0.83, "total_score": 0.62, "recommend_label": "推荐"},
-    {"platform": "jd", "title": "京东自营 蓝牙耳机无线降噪运动防水游戏低延迟", "price": 149.0, "sales": 22000, "shop_name": "京东自营", "shop_score": 4.9, "url": "https://item.jd.com/1002.html", "price_score": 0.79, "sales_score": 0.18, "shop_score_normalized": 1.0, "total_score": 0.65, "recommend_label": "推荐"},
-    {"platform": "jd", "title": "知名品牌 真无线蓝牙5.3主动降噪运动入耳式", "price": 169.0, "sales": 12000, "shop_name": "品牌旗舰店", "shop_score": 4.9, "url": "https://item.jd.com/1003.html", "price_score": 0.75, "sales_score": 0.1, "shop_score_normalized": 1.0, "total_score": 0.63, "recommend_label": "推荐"},
-    {"platform": "taobao", "title": "旗舰款 主动降噪蓝牙耳机真无线高保真音质", "price": 199.0, "sales": 9500, "shop_name": "旗舰音响专营", "shop_score": 4.9, "url": "https://item.taobao.com/item.htm?id=2005", "price_score": 0.69, "sales_score": 0.08, "shop_score_normalized": 1.0, "total_score": 0.6, "recommend_label": "推荐"},
-    {"platform": "jd", "title": "京东自营 主动降噪真无线蓝牙耳机旗舰版", "price": 249.0, "sales": 8500, "shop_name": "京东自营", "shop_score": 4.9, "url": "https://item.jd.com/1004.html", "price_score": 0.6, "sales_score": 0.07, "shop_score_normalized": 1.0, "total_score": 0.56, "recommend_label": "一般"},
-    {"platform": "jd", "title": "国际大牌 真无线降噪蓝牙耳机 Hi-Res音质", "price": 399.0, "sales": 6500, "shop_name": "国际品牌旗舰店", "shop_score": 4.9, "url": "https://item.jd.com/1005.html", "price_score": 0.31, "sales_score": 0.05, "shop_score_normalized": 1.0, "total_score": 0.45, "recommend_label": "一般"},
-    {"platform": "jd", "title": "国际旗舰 真无线蓝牙耳机 主动降噪 长续航", "price": 599.0, "sales": 4200, "shop_name": "国际品牌旗舰店", "shop_score": 4.9, "url": "https://item.jd.com/1006.html", "price_score": 0.0, "sales_score": 0.04, "shop_score_normalized": 1.0, "total_score": 0.31, "recommend_label": "不推荐"}
+    {
+      "platform": "taobao",
+      "title": "Mens Cotton Jacket",
+      "price": 55.99,
+      "sales": 500,
+      "shop_name": "潮流服饰店",
+      "shop_score": 4.7,
+      "url": "https://fakestoreapi.com/products/3",
+      "image_url": "https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_t.png",
+      "crawl_time": "2026-07-03 08:24:43",
+      "price_score": 0.95,
+      "sales_score": 1.0,
+      "shop_score_normalized": 0.97,
+      "total_score": 0.97,
+      "recommend_label": "强烈推荐"
+    },
+    {
+      "platform": "jd",
+      "title": "WD 4TB Gaming Drive Works with Playstation 4 Portable External Hard Drive",
+      "price": 114.0,
+      "sales": 400,
+      "shop_name": "京东自营旗舰店",
+      "shop_score": 4.8,
+      "url": "https://fakestoreapi.com/products/12",
+      "image_url": "https://fakestoreapi.com/img/61mtL65D4cL._AC_SX679_t.png",
+      "crawl_time": "2026-07-03 08:24:43",
+      "price_score": 0.89,
+      "sales_score": 0.77,
+      "shop_score_normalized": 1.0,
+      "total_score": 0.89,
+      "recommend_label": "强烈推荐"
+    },
+    {
+      "platform": "jd",
+      "title": "Silicon Power 256GB SSD 3D NAND A55 SLC Cache Performance Boost SATA III 2.5",
+      "price": 109.0,
+      "sales": 319,
+      "shop_name": "数码精选专营店",
+      "shop_score": 4.8,
+      "url": "https://fakestoreapi.com/products/11",
+      "image_url": "https://fakestoreapi.com/img/71kWymZ+c+L._AC_SX679_t.png",
+      "crawl_time": "2026-07-03 08:24:43",
+      "price_score": 0.9,
+      "sales_score": 0.58,
+      "shop_score_normalized": 1.0,
+      "total_score": 0.83,
+      "recommend_label": "强烈推荐"
+    },
+    {
+      "platform": "taobao",
+      "title": "Mens Casual Premium Slim Fit T-Shirts",
+      "price": 22.3,
+      "sales": 259,
+      "shop_name": "潮流服饰店",
+      "shop_score": 4.1,
+      "url": "https://fakestoreapi.com/products/2",
+      "image_url": "https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_t.png",
+      "crawl_time": "2026-07-03 08:24:43",
+      "price_score": 0.99,
+      "sales_score": 0.44,
+      "shop_score_normalized": 0.76,
+      "total_score": 0.75,
+      "recommend_label": "推荐"
+    },
+    {
+      "platform": "pdd",
+      "title": "White Gold Plated Princess",
+      "price": 9.99,
+      "sales": 400,
+      "shop_name": "特价清仓店",
+      "shop_score": 3.0,
+      "url": "https://fakestoreapi.com/products/7",
+      "image_url": "https://fakestoreapi.com/img/71YAIFU48IL._AC_UL640_QL65_ML3_t.png",
+      "crawl_time": "2026-07-03 08:24:43",
+      "price_score": 1.0,
+      "sales_score": 0.77,
+      "shop_score_normalized": 0.38,
+      "total_score": 0.74,
+      "recommend_label": "推荐"
+    },
+    {
+      "platform": "jd",
+      "title": "SanDisk SSD PLUS 1TB Internal SSD - SATA III 6 Gb/s",
+      "price": 109.0,
+      "sales": 470,
+      "shop_name": "官方授权店",
+      "shop_score": 2.9,
+      "url": "https://fakestoreapi.com/products/10",
+      "image_url": "https://fakestoreapi.com/img/61U7T1koQqL._AC_SX679_t.png",
+      "crawl_time": "2026-07-03 08:24:43",
+      "price_score": 0.9,
+      "sales_score": 0.93,
+      "shop_score_normalized": 0.34,
+      "total_score": 0.74,
+      "recommend_label": "推荐"
+    },
+    {
+      "platform": "taobao",
+      "title": "Mens Casual Slim Fit",
+      "price": 15.99,
+      "sales": 430,
+      "shop_name": "外贸原单店",
+      "shop_score": 2.1,
+      "url": "https://fakestoreapi.com/products/4",
+      "image_url": "https://fakestoreapi.com/img/71YXzeOuslL._AC_UY879_t.png",
+      "crawl_time": "2026-07-03 08:24:43",
+      "price_score": 0.99,
+      "sales_score": 0.84,
+      "shop_score_normalized": 0.07,
+      "total_score": 0.67,
+      "recommend_label": "推荐"
+    },
+    {
+      "platform": "pdd",
+      "title": "John Hardy Women's Legends Naga Gold & Silver Dragon Station Chain Bracelet",
+      "price": 695.0,
+      "sales": 400,
+      "shop_name": "源头厂家店",
+      "shop_score": 4.6,
+      "url": "https://fakestoreapi.com/products/5",
+      "image_url": "https://fakestoreapi.com/img/71pWzhdJNwL._AC_UL640_QL65_ML3_t.png",
+      "crawl_time": "2026-07-03 08:24:43",
+      "price_score": 0.31,
+      "sales_score": 0.77,
+      "shop_score_normalized": 0.93,
+      "total_score": 0.63,
+      "recommend_label": "推荐"
+    },
+    {
+      "platform": "jd",
+      "title": "WD 2TB Elements Portable External Hard Drive - USB 3.0",
+      "price": 64.0,
+      "sales": 203,
+      "shop_name": "京东自营旗舰店",
+      "shop_score": 3.3,
+      "url": "https://fakestoreapi.com/products/9",
+      "image_url": "https://fakestoreapi.com/img/61IBBVJvSDL._AC_SY879_t.png",
+      "crawl_time": "2026-07-03 08:24:43",
+      "price_score": 0.95,
+      "sales_score": 0.31,
+      "shop_score_normalized": 0.48,
+      "total_score": 0.62,
+      "recommend_label": "推荐"
+    },
+    {
+      "platform": "taobao",
+      "title": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
+      "price": 109.95,
+      "sales": 120,
+      "shop_name": "潮流服饰店",
+      "shop_score": 3.9,
+      "url": "https://fakestoreapi.com/products/1",
+      "image_url": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_t.png",
+      "crawl_time": "2026-07-03 08:24:43",
+      "price_score": 0.9,
+      "sales_score": 0.12,
+      "shop_score_normalized": 0.69,
+      "total_score": 0.6,
+      "recommend_label": "推荐"
+    },
+    {
+      "platform": "taobao",
+      "title": "BIYLACLESEN Women's 3-in-1 Snowboard Jacket Winter Coats",
+      "price": 56.99,
+      "sales": 235,
+      "shop_name": "潮流服饰店",
+      "shop_score": 2.6,
+      "url": "https://fakestoreapi.com/products/15",
+      "image_url": "https://fakestoreapi.com/img/51Y5NI-I5jL._AC_UX679_t.png",
+      "crawl_time": "2026-07-03 08:24:43",
+      "price_score": 0.95,
+      "sales_score": 0.38,
+      "shop_score_normalized": 0.24,
+      "total_score": 0.57,
+      "recommend_label": "一般"
+    },
+    {
+      "platform": "pdd",
+      "title": "Solid Gold Petite Micropave",
+      "price": 168.0,
+      "sales": 70,
+      "shop_name": "平价好物铺",
+      "shop_score": 3.9,
+      "url": "https://fakestoreapi.com/products/6",
+      "image_url": "https://fakestoreapi.com/img/61sbMiUnoGL._AC_UL640_QL65_ML3_t.png",
+      "crawl_time": "2026-07-03 08:24:43",
+      "price_score": 0.84,
+      "sales_score": 0.0,
+      "shop_score_normalized": 0.69,
+      "total_score": 0.54,
+      "recommend_label": "一般"
+    },
+    {
+      "platform": "pdd",
+      "title": "Pierced Owl Rose Gold Plated Stainless Steel Double",
+      "price": 10.99,
+      "sales": 100,
+      "shop_name": "平价好物铺",
+      "shop_score": 1.9,
+      "url": "https://fakestoreapi.com/products/8",
+      "image_url": "https://fakestoreapi.com/img/51UDEzMJVpL._AC_UL640_QL65_ML3_t.png",
+      "crawl_time": "2026-07-03 08:24:43",
+      "price_score": 1.0,
+      "sales_score": 0.07,
+      "shop_score_normalized": 0.0,
+      "total_score": 0.42,
+      "recommend_label": "一般"
+    },
+    {
+      "platform": "jd",
+      "title": "Acer SB220Q bi 21.5 inches Full HD (1920 x 1080) IPS Ultra-Thin",
+      "price": 599.0,
+      "sales": 250,
+      "shop_name": "数码精选专营店",
+      "shop_score": 2.9,
+      "url": "https://fakestoreapi.com/products/13",
+      "image_url": "https://fakestoreapi.com/img/81QpkIctqPL._AC_SX679_t.png",
+      "crawl_time": "2026-07-03 08:24:43",
+      "price_score": 0.41,
+      "sales_score": 0.42,
+      "shop_score_normalized": 0.34,
+      "total_score": 0.39,
+      "recommend_label": "不推荐"
+    },
+    {
+      "platform": "jd",
+      "title": "Samsung 49-Inch CHG90 144Hz Curved Gaming Monitor (LC49HG90DMNXZA) – Super Ultra",
+      "price": 999.99,
+      "sales": 140,
+      "shop_name": "京东自营旗舰店",
+      "shop_score": 2.2,
+      "url": "https://fakestoreapi.com/products/14",
+      "image_url": "https://fakestoreapi.com/img/81Zt42ioCgL._AC_SX679_t.png",
+      "crawl_time": "2026-07-03 08:24:43",
+      "price_score": 0.0,
+      "sales_score": 0.16,
+      "shop_score_normalized": 0.1,
+      "total_score": 0.08,
+      "recommend_label": "不推荐"
+    }
   ],
   "charts": {
     "price_bar_chart": {
-      "categories": ["蓝牙耳机真无线入耳...", "真无线蓝牙耳机2024...", "蓝牙耳机真无线入耳...", "迷你蓝牙耳机隐...", "无线蓝牙耳机运...", "蓝牙耳机真无线...", "蓝牙5.3真无线...", "京东自营 真无...", "高音质蓝牙耳机...", "京东自营 蓝牙..."],
-      "series": [{"name": "价格", "data": [29.9, 39.9, 49.9, 59.0, 69.0, 79.0, 89.0, 99.0, 129.0, 149.0]}]
+      "categories": [
+        "White Gold Plat...",
+        "Pierced Owl Ros...",
+        "Mens Casual Sli...",
+        "Mens Casual Pre...",
+        "Mens Cotton Jac...",
+        "BIYLACLESEN Wom...",
+        "WD 2TB Elements...",
+        "SanDisk SSD PLU...",
+        "Silicon Power 2...",
+        "Fjallraven - Fo..."
+      ],
+      "series": [
+        {
+          "name": "价格",
+          "data": [
+            9.99,
+            10.99,
+            15.99,
+            22.3,
+            55.99,
+            56.99,
+            64.0,
+            109.0,
+            109.0,
+            109.95
+          ]
+        }
+      ]
     },
     "price_trend_chart": {
-      "categories": ["30", "100", "170", "240", "310", "380", "450", "520"],
-      "series": [{"name": "商品数量", "data": [2, 4, 3, 2, 0, 1, 0, 1]}]
+      "categories": [
+        "10.0",
+        "134.0",
+        "257.0",
+        "381.0",
+        "505.0",
+        "629.0",
+        "752.0",
+        "876.0"
+      ],
+      "series": [
+        {
+          "name": "商品数量",
+          "data": [
+            11,
+            1,
+            0,
+            0,
+            1,
+            1,
+            0,
+            1
+          ]
+        }
+      ]
     },
     "radar_chart": {
       "indicator": [
-        {"name": "价格优势", "max": 100},
-        {"name": "销量", "max": 100},
-        {"name": "店铺评分", "max": 100}
+        {
+          "name": "价格优势",
+          "max": 100
+        },
+        {
+          "name": "销量",
+          "max": 100
+        },
+        {
+          "name": "店铺评分",
+          "max": 100
+        }
       ],
       "series": [
-        {"name": "京东", "value": [30, 12, 98]},
-        {"name": "淘宝", "value": [72, 36, 96]},
-        {"name": "拼多多", "value": [92, 100, 92]}
+        {
+          "name": "拼多多",
+          "value": [
+            34,
+            79,
+            67
+          ]
+        },
+        {
+          "name": "淘宝",
+          "value": [
+            84,
+            100,
+            70
+          ]
+        },
+        {
+          "name": "京东",
+          "value": [
+            0,
+            96,
+            70
+          ]
+        }
       ]
     },
     "platform_pie": {
       "data": [
-        {"name": "京东", "value": 6},
-        {"name": "淘宝", "value": 5},
-        {"name": "拼多多", "value": 4}
+        {
+          "name": "拼多多",
+          "value": 4
+        },
+        {
+          "name": "淘宝",
+          "value": 5
+        },
+        {
+          "name": "京东",
+          "value": 6
+        }
       ]
     }
   }

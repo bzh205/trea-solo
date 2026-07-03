@@ -113,7 +113,7 @@
                 const data = await resp.json();
                 if (data && data.products) {
                     renderResult(data);
-                    document.querySelector(".subtitle").textContent += "（当前展示示例数据，可输入关键词实时采集）";
+                    showNote("当前展示示例数据，输入关键词可获取真实数据进行对比");
                 }
             } catch (e) {
                 console.error("加载示例数据失败:", e);

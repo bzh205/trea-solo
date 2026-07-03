@@ -5,6 +5,7 @@ from typing import List, Dict, Any, Optional
 
 from models.product import Product
 from scrapers import SCRAPERS
+from scrapers.api_scraper import FakeStoreAPIScraper
 from processors.cleaner import DataCleaner
 from processors.deduplicator import Deduplicator
 from analyzers.comparator import Comparator
@@ -69,15 +70,26 @@ class PriceCompareEngine:
     async def _crawl(
         self, keyword: str, platforms: List[str], max_items: int
     ) -> tuple[List[Product], bool]:
-        """并发执行多平台爬虫，浏览器不可用时回退到模拟数据"""
-        # 检查 Playwright 是否可用
+        """优先使用公开API获取真实数据，失败时回退到浏览器采集或模拟数据"""
+        
+        # 第一步：尝试使用公开API获取真实数据
+        api_scraper = FakeStoreAPIScraper(max_items=max_items)
+        api_products = await api_scraper.search(keyword)
+        
+        if api_products:
+            print(f"[Engine] 使用公开API获取真实数据，共 {len(api_products)} 条")
+            return api_products, False
+        
+        print("[Engine] API获取失败，尝试浏览器采集")
+
+        # 第二步：检查 Playwright 是否可用
         try:
             from playwright.async_api import async_playwright
         except ImportError:
             print("[Engine] Playwright 未安装，使用模拟数据")
             return self._generate_mock_data(keyword, platforms, max_items), True
 
-        # 检查浏览器是否能启动
+        # 第三步：检查浏览器是否能启动
         browser_available = False
         try:
             async with async_playwright() as p:
@@ -91,7 +103,7 @@ class PriceCompareEngine:
         if not browser_available:
             return self._generate_mock_data(keyword, platforms, max_items), True
 
-        # 浏览器可用，执行真实采集
+        # 第四步：浏览器可用，执行真实采集
         all_products = []
         async with async_playwright() as p:
             tasks = []
@@ -111,14 +123,13 @@ class PriceCompareEngine:
 
         # 如果真实采集完全失败（被反爬），回退到模拟数据
         if not all_products:
-            print("[Engine] 所有平台均被反爬拦截，使用模拟数据补充")
+            print("[Engine] 所有平台均被反爬拦截，使用模拟数据")
             return self._generate_mock_data(keyword, platforms, max_items), True
 
         # 真实采集到部分数据，补充模拟数据以保证有足够对比样本
         if len(all_products) < 6:
             print(f"[Engine] 真实采集仅获取 {len(all_products)} 条，补充模拟数据")
             mock_data = self._generate_mock_data(keyword, platforms, max_items)
-            # 避免重复
             existing_titles = {p.title for p in all_products}
             for p in mock_data:
                 if p.title not in existing_titles:
